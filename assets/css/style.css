@@ -1,0 +1,3386 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    transition: .5s;
+    font-family: "Montserrat", sans-serif;
+    scroll-behavior: smooth;
+    font-weight: 400;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+.burger_adaptiv {
+    display: none;
+}
+
+.banner_adaptiv {
+    display: none;
+}
+
+.popular_kategoty_2 {
+    display: none;
+}
+
+.novinki_adaptive {
+    display: none;
+}
+
+.odin_tovar_adaptiv {
+    display: none;
+}
+
+.burger_adaptiv_telephone {
+    display: none;
+}
+
+.btn_pink_adaptiv {
+    display: none;
+}
+
+/* подключение шрифтов */
+@font-face {
+    font-family: "Montserrat";
+    src: url(../fonts/Montserrat-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(../fonts/Montserrat-Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(../fonts/Montserrat-SemiBold.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Forum";
+    src: url(../fonts/Forum-Regular.ttf);
+}
+
+/* карточка товара */
+.osnov_card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 325px;
+}
+
+.image_osn_card {
+    position: relative;
+}
+
+.korzina_button {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.opisanie_osnov_card {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.category_osnov_card {
+    font-size: 16px;
+    font-weight: 600;
+    color: #999999;
+}
+
+.name_osnov_card {
+    font-family: "Forum";
+    font-size: 24px;
+}
+
+.cost_with_skidka {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.cost {
+    font-size: 22px;
+}
+
+.skidka {
+    font-size: 20px;
+    color: #999999;
+    text-decoration: line-through;
+}
+
+/* контейнер */
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.my-120 {
+    padding-top: 120px;
+}
+
+h1 {
+    font-family: "Forum";
+    color: #4F1034;
+    font-size: 58px;
+    text-transform: uppercase;
+    line-height: 110%;
+}
+
+h2 {
+    font-family: "Forum";
+    color: #4F1034;
+    font-size: 40px;
+}
+
+.title h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+h3 {
+    font-size: 36px;
+    font-family: "Forum";
+    color: #4F1034;
+}
+
+.btn_pink {
+    background-color: #904F69;
+    color: white;
+    font-size: 20px;
+    padding: 13px 74px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid #904F69;
+}
+
+.btn_pink a {
+    color: white;
+}
+
+.button_pr {
+    padding: 12px 27px;
+    border: 1px solid #904F69;
+    color: #904F69;
+    font-size: 19px;
+    background: none;
+    cursor: pointer;
+}
+
+/* header start */
+header {
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.burger_desctop {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.burger_desctop a {
+    font-size: 18px;
+    color: black;
+}
+
+.poisk {
+    display: flex;
+    gap: 5px;
+}
+
+.poisk input {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid black;
+    font-size: 16px;
+}
+
+header nav img {
+    cursor: pointer;
+}
+
+/* header end */
+
+/* banner start */
+.banner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner_left img {
+    width: 693.15px;
+    height: 660px;
+}
+
+.banner_right {
+    max-width: 705px;
+    display: flex;
+    flex-direction: column;
+    gap: 43px;
+}
+
+.foto {
+    display: flex;
+    justify-content: space-between;
+}
+
+.katalog_button {
+    display: flex;
+    gap: 18px;
+}
+
+.katalog_button button {
+    width: 191px;
+    padding: 11px 30px;
+    background: #4F1034;
+    color: #ffffff;
+    font-size: 20px;
+    border: 2px solid #4F1034;
+    cursor: pointer;
+}
+
+.katalog_button button:hover {
+    border: 2px solid #4F1034;
+    color: #4F1034;
+    background: none;
+}
+
+.katalog_button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.katalog_button p {
+    color: rgba(79, 16, 52, 0.7);
+    font-size: 18px;
+    max-width: 500px;
+}
+
+/* banner end */
+
+/* infoblok start */
+.infoblock_info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.preimuchestva_card {
+    display: flex;
+    justify-content: space-between;
+    width: 521px;
+    align-items: center;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 419px;
+}
+
+.right p {
+    color: #989898;
+    font-size: 17px;
+    line-height: 130%;
+}
+
+.preimuchestva_stolbec {
+    display: flex;
+    flex-direction: column;
+    gap: 69px;
+}
+
+/* infoblok end */
+
+/* popular_kategoty start */
+.popular_kategoty_katalog {
+    display: flex;
+    gap: 26px;
+}
+
+.category {
+    position: relative;
+}
+
+.category button {
+    position: absolute;
+    bottom: 28px;
+    left: 28px;
+    padding: 11px 37px;
+    background: #ffffff;
+    border: 1px solid #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.category button:hover {
+    color: white;
+    border: 1px solid #ffffff;
+    background: none;
+}
+
+.popular_kategoty_right {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 26px;
+}
+
+/* popular_kategoty end */
+
+/* novinki start */
+.novinki_content {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.collection_text {
+    position: absolute;
+    bottom: 35px;
+    left: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.collection_text p {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.novinki_right {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 36px;
+    width: 686px;
+}
+
+/* novinki end */
+
+/* personal start */
+.personal {
+    background-color: #F0DAED;
+    padding: 70px 0;
+    margin-top: 120px;
+}
+
+.personal_content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.personal_content p {
+    text-align: center;
+    width: 390px;
+    color: #904F69;
+    font-size: 21.25px;
+    line-height: 150%
+}
+
+.rassylka {
+    width: 444px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.rassylka input {
+    width: 444px;
+    padding: 11.61px 35.77px;
+    color: #939393;
+    font-size: 23px;
+    border: 1px solid #904F69;
+}
+
+input[type="email"]:focus {
+    color: black;
+}
+
+.chekbox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.chekbox input {
+    width: 13px;
+}
+
+.chekbox label {
+    color: #904F69;
+    font-size: 14px;
+    text-align: center;
+}
+
+input[type="checkbox"] {
+    accent-color: #904F69;
+}
+
+.btn {
+    background: #904F69;
+    width: 444px;
+    padding: 12px 153px;
+    color: white;
+    font-size: 19px;
+    border: 1px solid #904F69;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: none;
+    color: #904F69;
+}
+
+/* personal end */
+
+/* popular start */
+.popular_content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.popukar_katalog {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 23px;
+}
+
+.slider button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    color: #904F69;
+    border: 2px solid #904F69;
+    background: none;
+    cursor: pointer;
+}
+
+.popukar_katalog .korzina_button {
+    bottom: 30px;
+}
+
+/* footer start */
+footer {
+    margin-top: 120px;
+    padding: 112px 0;
+    border-top: 2px solid #904F69;
+    font-size: 20px;
+    color: #989898;
+}
+
+footer img {
+    cursor: pointer;
+}
+
+h4 {
+    color: #4F1034;
+    font-weight: 600;
+    font-size: 22px;
+    padding-bottom: 23px;
+}
+
+.liniya {
+    height: 230px;
+    width: 2px;
+    background: rgba(79, 16, 52, 0.14);
+}
+
+.footer_content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.stolbec_1 {
+    display: flex;
+    flex-direction: column;
+    width: 310px;
+}
+
+address {
+    padding-top: 43px;
+}
+
+.prava {
+    padding-top: 45px;
+}
+
+.stolbec_2 {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+}
+
+.telephone {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.telephone a {
+    font-size: 22px;
+    color: #989898;
+}
+
+.news {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.icons_news {
+    display: flex;
+    gap: 18px;
+}
+
+.telephone img {
+    width: 30px;
+}
+
+.stolbec_3 {
+    width: 160px;
+}
+
+.stolbec_3 nav {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.stolbec_3 nav a {
+    color: #989898;
+}
+
+.stolbec_4 {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.documents {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.documents a {
+    color: #989898;
+}
+
+/* footer end */
+
+/* popular end */
+
+@media(max-width: 1000px) {
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .my-120 {
+        padding-top: 100px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    /* карточка товара */
+    .image_tovar {
+        width: 170px;
+    }
+
+    .collection_text p {
+        font-size: 11px;
+        bottom: 30px;
+        left: 15px;
+    }
+
+    .korzina_button {
+        width: 26px;
+    }
+
+    .osnov_card {
+        width: 170px;
+        gap: 5px;
+    }
+
+    .opisanie_osnov_card {
+        width: 170px;
+        gap: 4px;
+    }
+
+    .category_osnov_card {
+        font-size: 12px;
+    }
+
+    .name_osnov_card {
+        font-size: 16px;
+    }
+
+    .cost {
+        font-size: 14px;
+    }
+
+    .skidka {
+        font-size: 13px;
+    }
+
+    /* header start */
+    .burger_adaptiv_telephone {
+        display: none;
+    }
+
+    .burger_desctop {
+        display: none;
+    }
+
+    .burger_adaptiv {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        position: relative;
+    }
+
+    .burger_adaptiv .luupa {
+        margin-left: 50px;
+    }
+
+    .burger_adaptiv img {
+        width: 25px;
+    }
+
+    .logo a img {
+        width: 111px;
+    }
+
+    #burger,
+    [for=burger] {
+        display: none;
+    }
+
+    [for=burger] {
+        position: absolute;
+        top: 10px;
+        left: 8px;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    .burger_adaptiv span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: #414141;
+        position: relative;
+    }
+
+    .burger_adaptiv span::before,
+    .burger_adaptiv span::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background: #414141;
+    }
+
+    .burger_adaptiv span::before {
+        top: -8px;
+    }
+
+    .burger_adaptiv span::after {
+        top: 8px;
+    }
+
+    .burger_adaptiv nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        height: 100%;
+        background: #904F69;
+        padding-top: 60px;
+        transition: 0.5s;
+    }
+
+    .burger_adaptiv nav a {
+        display: block;
+        padding: 15px 20px;
+        color: white;
+        font-size: 20px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    #burger:checked~nav {
+        right: 0;
+        z-index: 1001;
+    }
+
+    #burger:checked~label span {
+        background: transparent;
+    }
+
+    #burger:checked~label span::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    #burger:checked~label span::after {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+    [for=burger] {
+        display: block;
+    }
+
+    /* header stop */
+
+    /* banner start */
+    .banner_left img {
+        width: 390px;
+        height: 369px;
+    }
+
+    .banner_right {
+        max-width: 391px;
+        gap: 20px;
+    }
+
+    .banner_right img {
+        width: 188.5px;
+        height: 184.6px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .katalog_button button {
+        width: 116px;
+        padding: 7px 23px;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    .katalog_button p {
+        font-size: 9px;
+    }
+
+    /* banner end */
+
+    /* infoblock start  */
+    .preimuchestva_card {
+        width: 310px;
+    }
+
+    .right {
+        width: 250px;
+    }
+
+    .left .odin {
+        width: 25px;
+    }
+
+    .left img {
+        width: 45px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    .right p {
+        font-size: 11px;
+    }
+
+    .pomada {
+        width: 175px;
+        margin-top: 20px;
+    }
+
+    /* infoblock end */
+
+    /* popular_kategoty start */
+    .popular_kategoty_2 {
+        z-index: 100;
+    }
+
+    .popular_kategoty_katalog {
+        gap: 14px;
+    }
+
+    .popular_kategoty_right {
+        gap: 14px;
+    }
+
+    .popular_kategoty_left .category img {
+        width: 188px;
+    }
+
+    .popular_kategoty_right .category img {
+        width: 270px;
+    }
+
+    .popular_kategoty_right .category .category_more {
+        width: 300px;
+    }
+
+    .category button {
+        bottom: 15px;
+        left: 15px;
+        padding: 6px 21px;
+        font-size: 11px;
+    }
+
+    /* popular_kategoty end */
+
+    /* novinki start */
+    .novinki_content {
+        gap: 25px;
+    }
+
+    .novinki_left img {
+        width: 400px;
+    }
+
+    .collection_text {
+        bottom: 15px;
+        left: 15px;
+    }
+
+    .novinki_right {
+        gap: 19px;
+    }
+
+    /* novinki end */
+
+    /* personal start */
+    .personal {
+        padding: 50px 0;
+    }
+
+    .personal_content {
+        gap: 20px;
+    }
+
+    .personal_content p {
+        font-size: 18px;
+    }
+
+    .rassylka {
+        width: 270px;
+    }
+
+    .rassylka input {
+        width: 270px;
+        font-size: 17px;
+        padding: 7px 21px;
+    }
+
+    .chekbox input {
+        width: 8px;
+    }
+
+    .chekbox label {
+        font-size: 9px;
+    }
+
+    .btn {
+        width: 270px;
+        font-size: 13px;
+        padding: 7px 92px;
+    }
+
+    /* personal end */
+
+    /* popular start */
+    .popular_content {
+        gap: 40px;
+    }
+
+    .slider {
+        gap: 14px;
+    }
+
+    .slider button {
+        width: 40px;
+        height: 40px;
+    }
+
+    .slider button img {
+        width: 15px;
+    }
+
+    /* popular end */
+
+    /* footer start */
+    footer {
+        font-size: 14px;
+        padding: 80px 0;
+    }
+
+    .stolbec_1 {
+        width: 215px;
+    }
+
+    .stolbec_2 {
+        width: 200px;
+    }
+
+    .stolbec_3 {
+        width: 110px;
+    }
+
+    .stolbec_4 {
+        width: 180px;
+        gap: 40px;
+    }
+
+    footer .logo img {
+        width: 101px;
+    }
+
+    footer h4 {
+        font-size: 16px;
+        padding-bottom: 12px;
+    }
+
+    .telephone a {
+        font-size: 14px;
+    }
+
+    .liniya {
+        height: 155px;
+    }
+
+    address {
+        padding-top: 24px;
+    }
+
+    .prava {
+        padding-top: 35px;
+    }
+
+    .telephone {
+        gap: 6px;
+    }
+
+    .telephone img {
+        width: 22px;
+    }
+
+    .news {
+        padding-top: 17px;
+    }
+
+    .news img {
+        width: 22px;
+    }
+
+    /* footer end */
+}
+
+@media(max-width: 490px) {
+    .container {
+        max-width: 390px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .my-120 {
+        padding-top: 40px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    .title h2 {
+        padding-bottom: 20px;
+        text-align: center;
+    }
+
+    /* карточка товара */
+    .image_tovar {
+        width: 185px;
+    }
+
+    .collection_text p {
+        font-size: 11px;
+        bottom: 30px;
+        left: 15px;
+    }
+
+    .korzina_button {
+        width: 30px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .osnov_card {
+        width: 185px;
+        gap: 5px;
+    }
+
+    .opisanie_osnov_card {
+        width: 185px;
+        gap: 4px;
+    }
+
+    .category_osnov_card {
+        font-size: 12px;
+    }
+
+    .name_osnov_card {
+        font-size: 16px;
+    }
+
+    .cost {
+        font-size: 14px;
+    }
+
+    .skidka {
+        font-size: 13px;
+    }
+
+    /* header start */
+    .burger_adaptiv {
+        display: none;
+    }
+
+    .burger_adaptiv_telephone {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        position: relative;
+    }
+
+    .burger_adaptiv_telephone .luupa {
+        margin-left: 50px;
+    }
+
+    .burger_adaptiv_telephone img {
+        width: 23px;
+    }
+
+    .logo a img {
+        width: 100px;
+    }
+
+    #burger2,
+    [for=burger2] {
+        display: none;
+    }
+
+    [for=burger2] {
+        position: absolute;
+        top: 10px;
+        left: 8px;
+        width: 23px;
+        height: 23px;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    .burger_adaptiv_telephone span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: #414141;
+        position: relative;
+    }
+
+    .burger_adaptiv_telephone span::before,
+    .burger_adaptiv_telephone span::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background: #414141;
+    }
+
+    .burger_adaptiv_telephone span::before {
+        top: -8px;
+    }
+
+    .burger_adaptiv_telephone span::after {
+        top: 8px;
+    }
+
+    .burger_adaptiv_telephone nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        height: 100%;
+        background: #904F69;
+        padding-top: 60px;
+        transition: 0.5s;
+    }
+
+    .burger_adaptiv_telephone nav a {
+        display: block;
+        padding: 15px 20px;
+        color: white;
+        font-size: 20px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    #burger2:checked~nav {
+        right: 0;
+        z-index: 1001;
+    }
+
+    #burger2:checked~label span {
+        background: transparent;
+    }
+
+    #burger2:checked~label span::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    #burger2:checked~label span::after {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+    [for=burger2] {
+        display: block;
+    }
+
+    /* header end */
+
+    /* banner start */
+    .banner {
+        display: none;
+    }
+
+    .banner_adaptiv {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    h1 {
+        font-size: 30px;
+        text-align: center;
+        line-height: 110%;
+    }
+
+    .foto {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .foto img {
+        width: 190px;
+    }
+
+    .katalog_button button {
+        padding: 7px 23px;
+        font-size: 12.25px;
+    }
+
+    /* banner end */
+
+    /* infoblock start  */
+    .infoblock_info .pomada {
+        display: none;
+    }
+
+    .infoblock_info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .preimuchestva_stolbec {
+        gap: 20px;
+    }
+
+    .preimuchestva_card {
+        width: 390px;
+    }
+
+    .right {
+        width: 320px;
+    }
+
+    /* infoblock end */
+
+    /* popular_kategoty start */
+    .popular_kategoty {
+        display: none;
+    }
+
+    .popular_kategoty_2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .popular_kategoty_niz {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .category button {
+        position: absolute;
+        bottom: 14px;
+        left: 14px;
+        padding: 5px 27px;
+        background: #ffffff;
+        border: 1px solid #ffffff;
+        font-size: 9px;
+        cursor: pointer;
+    }
+
+    .category button:hover {
+        color: white;
+        border: 1px solid #ffffff;
+        background: none;
+    }
+
+    /* popular_kategoty end */
+
+    /* novinki start */
+    .novinki {
+        display: none;
+    }
+
+    .novinki_adaptive {
+        display: flex;
+        flex-direction: column;
+        /* gap: 20px; */
+    }
+
+    .novinki_niz {
+        padding-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* novinki end */
+
+    /* personal start */
+    .personal {
+        padding: 40px 0;
+    }
+
+    .personal_content {
+        gap: 10px;
+    }
+
+    .personal_content p {
+        font-size: 13px;
+        width: 250px;
+    }
+
+    .rassylka {
+        width: 250px;
+    }
+
+    .rassylka input {
+        width: 250px;
+        font-size: 14px;
+        padding: 4px 14px;
+    }
+
+    .chekbox input {
+        width: 6px;
+    }
+
+    .chekbox label {
+        font-size: 8px;
+    }
+
+    .btn {
+        width: 250px;
+        font-size: 11px;
+        padding: 6px 64px;
+    }
+
+    /* personal end */
+
+    /* popular start */
+    /* popular end */
+
+    /* footer start */
+    .liniya_not {
+        display: none;
+    }
+
+    .footer_content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 30px 0;
+    }
+
+    .stolbec_1 {
+        width: 150px;
+    }
+
+    .stolbec_2 {
+        width: 150px;
+    }
+
+    .stolbec_3 {
+        width: 150px;
+    }
+
+    .stolbec_4 {
+        width: 150px;
+        gap: 40px;
+    }
+
+    .documents {
+        gap: 8px;
+    }
+
+    footer .logo img {
+        width: 101px;
+    }
+
+    footer h4 {
+        font-size: 14px;
+        padding-bottom: 12px;
+    }
+
+    .telephone a {
+        font-size: 14px;
+    }
+
+    .stolbec_3 nav {
+        gap: 10px;
+    }
+
+    .liniya {
+        height: 155px;
+    }
+
+    address {
+        padding-top: 24px;
+    }
+
+    .prava {
+        padding-top: 20px;
+    }
+
+    .telephone {
+        gap: 6px;
+    }
+
+    .telephone img {
+        width: 22px;
+    }
+
+    .news {
+        padding-top: 17px;
+    }
+
+    .news img {
+        width: 22px;
+    }
+
+    /* footer end */
+}
+
+/* katalog start */
+.banner_katalog {
+    background-image: url(../img/katalog/banner.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 348px;
+    margin-top: 56px;
+}
+
+.katalog_cards {
+    background-color: white;
+    padding-top: 56px;
+}
+
+.perehod_katalog {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-top: 53px;
+}
+
+.perehod_katalog a {
+    font-size: 20px;
+    color: #904F69;
+}
+
+.perehod_katalog p {
+    font-size: 20px;
+    color: #904F69;
+}
+
+.fyltr_ktalog h5 {
+    font-family: "Forum";
+    font-size: 32px;
+    color: #4F1034;
+}
+
+.category_katalog_nazv {
+    font-family: "Forum";
+    font-size: 26px;
+    color: #904F69;
+    padding-top: 24px;
+}
+
+.fyltr {
+    padding-top: 17px;
+    padding-bottom: 1000px;
+}
+
+.katalog_with_fyltr {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+}
+
+.fyltr_ktalog {
+    width: 290px;
+    border-right: 2px solid #904F69;
+    flex-shrink: 0;
+    position: sticky;
+    top: 0;
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+.cardss {
+    padding-left: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px;
+    width: 1200px;
+}
+
+.osnova_kaatlog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.cardss .button_pr {
+    width: 270px;
+    margin-left: 470px;
+}
+
+/*  */
+.accordion {
+    background-color: transparent;
+    color: #989898;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: all 0.3s ease;
+    font-family: "Forum";
+    font-size: 24px;
+    position: relative;
+    z-index: 1;
+}
+
+.accordion:hover {
+    color: #4F1034;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    z-index: 2;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.panel a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #989898;
+    font-family: "Forum";
+    font-size: 23.88px;
+    transition: color 0.3s;
+}
+
+.panel a:hover {
+    color: #4F1034;
+    background-color: #f0f0f0;
+}
+
+.accordion-container {
+    position: relative;
+    width: 100%;
+}
+
+.accordion:hover+.panel,
+.panel:hover {
+    display: block;
+}
+
+.accordion:hover~.accordion {
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.panel.show {
+    display: block;
+}
+
+.accordion-container .accordion {
+    position: relative;
+    z-index: 1;
+}
+
+.accordion-container .panel {
+    position: absolute;
+    z-index: 2;
+}
+
+.accordion-container .accordion:hover {
+    z-index: 3;
+}
+
+.accordion-container .accordion:hover+.panel {
+    z-index: 3;
+}
+
+.accordion-container .panel {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-container .accordion+.accordion {
+    margin-top: 0;
+}
+
+/*  */
+/* katalog end */
+
+/* katalog_telephone start */
+.fylytr_accordeon .accordion_2 {
+    background-color: transparent;
+    color: #904F69;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    font-family: "Forum";
+    font-size: 24px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fylytr_accordeon {
+    display: flex;
+    flex-direction: column;
+}
+
+.accordion_2-1 {
+    color: #904F69;
+    font-size: 24px;
+    padding: 18px;
+    font-family: "Forum";
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.fylytr_accordeon .panel_2 {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.fylytr_accordeon .panel_2 a {
+    display: flex;
+    flex-direction: column;
+    color: #989898;
+    font-size: 24px;
+    padding: 10px 18px;
+    font-family: "Forum";
+}
+
+.fylytr_accordeon .accordion_2:after {
+    content: '\002B';
+    font-size: 20px;
+    color: #904F69;
+    float: right;
+    margin-left: 5px;
+}
+
+.katalog_telephone {
+    padding-top: 40px;
+}
+
+/* katalog_telephone end */
+@media(max-width: 1000px) {
+    .banner_katalog {
+        background-image: url(../img/katalog/banner2.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 212px;
+        margin-top: 35px;
+    }
+
+    .perehod_katalog a {
+        font-size: 14px;
+    }
+
+    .perehod_katalog p {
+        font-size: 14px
+    }
+
+    .perehod_katalog {
+        padding-top: 40px;
+    }
+
+    .fyltr_ktalog {
+        width: 220px;
+    }
+
+    .fyltr_ktalog h5 {
+        font-size: 27px;
+    }
+
+    .category_katalog_nazv {
+        font-size: 23px;
+    }
+
+    .accordion {
+        font-size: 22px;
+        padding: 10px;
+    }
+
+    .panel a {
+        font-size: 22px;
+        padding: 10px 10px;
+    }
+
+    .cardss {
+        padding-left: 20px;
+
+    }
+
+    .osnova_kaatlog {
+        gap: 20px;
+        width: 560px;
+    }
+
+    .cardss {
+        width: 600px;
+    }
+
+    .panel {
+        padding: 0;
+    }
+
+    .button_pr {
+        padding: 7px 33px;
+        font-size: 12px;
+        width: 170px;
+    }
+
+    .cardss .button_pr {
+        padding: 8px 30px;
+        font-size: 12px;
+        width: 170px;
+        margin-left: 200px;
+    }
+}
+
+/* katalog_cards_phone_all start */
+@media(max-width: 490px) {
+    .katalog_cards_phone a {
+        font-family: "Forum";
+        font-size: 18px;
+        color: #4F1034;
+    }
+
+    .cardss_telephone {
+        padding-top: 17px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
+
+/* katalog_cards_phone_all end */
+
+/* odin_tovar start */
+.odin_tovar {
+    padding-top: 80px;
+}
+
+.odin_tovar_verh {
+    display: flex;
+    gap: 50px;
+}
+
+.odin_tovar_verh_left {
+    display: flex;
+    justify-content: space-between;
+}
+
+.odin_tovar_verh_left {
+    display: flex;
+    justify-content: space-between;
+    width: 720px;
+    align-items: center;
+}
+
+.many_slider_left {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+}
+
+.images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.str_slider {
+    width: 50px;
+    cursor: pointer;
+}
+
+.odin_tovar_verh_right {
+    display: flex;
+    flex-direction: column;
+}
+
+.category_odin {
+    color: #989898;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.nazv_odin {
+    font-family: "Forum";
+    font-size: 36px;
+    padding-top: 12px;
+}
+
+.cost_with_skidka_odin {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    padding-top: 21px;
+}
+
+.cost_odin {
+    font-size: 32px;
+}
+
+.skidka_odin {
+    text-decoration: line-through;
+    color: #989898;
+    font-size: 24px;
+}
+
+.odin_tovar_verh_right .button_pr {
+    padding: 13px 83px;
+    width: 275px;
+    font-size: 20px;
+    margin-top: 33px;
+}
+
+.characteristics {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding-top: 34px;
+    max-width: 880px;
+}
+
+.characteristics_catalog {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.characteristics_nazv {
+    font-weight: 600;
+    color: #904F69;
+    font-size: 20px;
+}
+
+.spec-row .spec-label {
+    color: #989898;
+}
+
+.spec-row .spec-value {
+    color: #904F69;
+}
+
+.spec-row {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 8px;
+}
+
+.spec-label {
+    white-space: nowrap;
+    margin-right: 4px;
+}
+
+.spec-value {
+    white-space: nowrap;
+    margin-left: 4px;
+}
+
+.spec-dots {
+    flex: 1;
+    min-width: 20px;
+    border-bottom: 1px solid #989898;
+    height: 1em;
+}
+
+.odin_tovar_niz {
+    padding-top: 60px;
+    display: flex;
+    gap: 50px;
+}
+
+.odin_tovar_niz_left {
+    width: 720px;
+}
+
+.odin_tovar_niz_left p {
+    color: #989898;
+    font-size: 16px;
+    line-height: 200%;
+}
+
+.odin_tovar_niz_right {
+    display: flex;
+    gap: 18px;
+}
+
+.odin_tovar_niz_right img {
+    width: 55px;
+}
+
+.preim_card {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.odin_tovar_niz_right p {
+    font-size: 14px;
+    width: 154px;
+}
+
+
+/* odin_tovar end */
+
+@media(max-width: 1000px) {
+    .odin_tovar_adaptiv {
+        display: none;
+    }
+
+    .odin_tovar {
+        padding-top: 50px;
+    }
+
+    .odin_tovar_verh {
+        gap: 25px;
+    }
+
+    .many_slider_left .str_slider {
+        width: 31px;
+    }
+
+    .many_slider_left img {
+        width: 100px;
+    }
+
+    .images {
+        gap: 12px;
+    }
+
+    .many_slider_right img {
+        width: 325px;
+    }
+
+    .odin_tovar_verh_left {
+        width: 485px;
+    }
+
+    .category_odin {
+        font-size: 15px
+    }
+
+    .nazv_odin {
+        font-size: 25px;
+        padding-top: 7px;
+    }
+
+    .cost_odin {
+        font-size: 20px;
+    }
+
+    .skidka_odin {
+        font-size: 15px;
+    }
+
+    .cost_with_skidka_odin {
+        gap: 8px;
+        padding-top: 13px;
+    }
+
+    .odin_tovar_verh_right .button_pr {
+        width: 180px;
+        padding: 8px 51px;
+        font-size: 14px;
+        margin-top: 23px;
+    }
+
+    .characteristics_nazv {
+        font-size: 16px;
+    }
+
+    .characteristics_catalog {
+        font-size: 14px;
+    }
+
+    .odin_tovar_niz_left {
+        width: 439.85px;
+    }
+
+    .odin_tovar_niz_left p {
+        font-size: 13px;
+    }
+
+    .odin_tovar_niz_right {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .odin_tovar_niz_right img {
+        width: 45px;
+    }
+
+    .odin_tovar_niz_right p {
+        font-size: 11px;
+    }
+
+    .odin_tovar_niz {
+        gap: 25px;
+    }
+}
+
+@media(max-width: 490px) {
+    .odin_tovar_adaptiv {
+        display: block;
+    }
+
+    .odin_tovar {
+        display: none;
+    }
+
+    .odin_tovar_adaptiv .slider_tovars {
+        padding-top: 10px;
+    }
+
+    .odin_tovar_adaptiv .tovar_opisanie {
+        width: 100%;
+        font-size: 12px;
+        line-height: 200%;
+        color: #989898;
+        padding-top: 13px;
+    }
+
+    .odin_tovar_adaptiv .button_pr {
+        font-size: 13px;
+        margin-top: 13px;
+    }
+
+    .characteristics_catalog {
+        font-size: 13px;
+    }
+
+    .odin_tovar_niz_right {
+        padding-top: 10px;
+    }
+
+    .odin_tovar_adaptiv {
+        padding-top: 40px;
+    }
+
+    .preim_card img {
+        width: 40px;
+    }
+
+    .preim_card p {
+        width: 300px;
+        font-size: 12px;
+    }
+
+    .preim_card {
+        display: flex;
+        align-items: center;
+        gap: 3px;
+    }
+}
+
+/* korzina start */
+.korzina {
+    padding-top: 65px;
+}
+
+.korzina_content {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 38px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.korzina_left {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: auto;
+    padding-right: 20px;
+}
+
+.korzina_card {
+    border-top: 1px solid #904F69;
+    width: 832px;
+    padding: 21px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.img_nazv_kor {
+    display: flex;
+    gap: 30px;
+    width: 538px;
+}
+
+.dobavleny_tovar {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.dobavleny_tovar_category {
+    font-weight: 500;
+    font-size: 16px;
+    color: #989898;
+}
+
+.dobavleny_tovar_nazv {
+    font-family: "Forum";
+    font-size: 20px;
+}
+
+.cost_with_cound {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 245px;
+}
+
+.costs_skidka {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.cost_kor {
+    font-size: 24px;
+}
+
+.skidka_kor {
+    color: #989898;
+    font-size: 15px;
+    text-decoration: line-through;
+}
+
+.dobavit_udalit {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.plus_minus {
+    display: flex;
+}
+
+.pm,
+.shetchik {
+    padding: 5px;
+    width: 34px;
+    height: 34px;
+    background: #B9B7B7;
+    color: white;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #B9B7B7;
+    background: #B9B7B7;
+    cursor: pointer;
+}
+
+.pm:hover {
+    background-color: #989898;
+    border: 1px solid #989898;
+}
+
+.udalit {
+    font-size: 45px;
+    color: #999999;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.korzina_right {
+    width: 530px;
+    flex-shrink: 0;
+}
+
+.korzina_right .btn_pink {
+    width: 530px;
+}
+
+.itog_summa {
+    padding-top: 40px;
+    font-family: "Forum";
+    font-size: 30px;
+    color: #4F1034;
+}
+
+.sum {
+    padding-top: 25px;
+}
+
+.sum .spec-label {
+    font-size: 20px;
+    color: #989898;
+}
+
+.sum .spec-value {
+    font-size: 20px;
+    color: #989898;
+}
+
+.sum_itog .spec-label {
+    font-size: 20px;
+    color: #4F1034;
+}
+
+.sum_itog .spec-value {
+    font-size: 20px;
+    color: #4F1034;
+}
+
+.sum_itog .spec-dots {
+    border-bottom: 1px solid #904F69;
+}
+
+.sum_itog {
+    padding-top: 25px;
+}
+
+/* korzina end */
+
+@media(max-width: 1000px) {
+    .img_nazv_kor img {
+        width: 80px;
+    }
+
+    .korzina_card {
+        padding: 11px 0;
+        width: 480px;
+    }
+
+    .img_nazv_kor {
+        gap: 15px;
+    }
+
+    .dobavleny_tovar_category {
+        font-size: 12px;
+    }
+
+    .dobavleny_tovar_nazv {
+        font-size: 18px;
+    }
+
+    .korzina_right .btn_pink {
+        width: 273px;
+        font-size: 16px;
+        padding: 8px 100px;
+    }
+
+    .itog_summa {
+        font-size: 24px;
+    }
+
+    .sum .spec-label {
+        font-size: 15px;
+    }
+
+    .sum .spec-value {
+        font-size: 15px;
+    }
+
+    .sum_itog .spec-label {
+        font-size: 15px;
+    }
+
+    .sum_itog .spec-value {
+        font-size: 15px;
+    }
+
+    .korzina_right {
+        width: 273px;
+    }
+
+    .cost_kor {
+        font-size: 16px;
+    }
+
+    .skidka_kor {
+        font-size: 14px;
+    }
+
+    .pm,
+    .shetchik {
+        padding: 5px;
+        font-size: 16px;
+        width: 25px;
+    }
+
+    .udalit {
+        font-size: 35px;
+    }
+
+    .btn_pink_adaptiv {
+        display: none;
+    }
+}
+
+@media(max-width: 490px) {
+    .korzina_content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .korzina {
+        padding-top: 20px;
+    }
+
+    .korzina h2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .korzina_left {
+        width: 100%;
+        padding-right: 0;
+    }
+
+
+    .korzina_content {
+        height: 100%;
+        padding-top: 30px;
+    }
+
+    .img_nazv_kor img {
+        width: 55px;
+    }
+
+    .korzina_card {
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    .img_nazv_kor {
+        gap: 15px;
+    }
+
+    .dobavleny_tovar_category {
+        font-size: 10px;
+    }
+
+    .dobavleny_tovar_nazv {
+        font-size: 14px;
+    }
+
+    .korzina_right .btn_pink {
+        width: 100%;
+        font-size: 16px;
+        padding: 8px 100px;
+    }
+
+    .itog_summa {
+        font-size: 23px;
+        padding-top: 20px;
+    }
+
+    .sum .spec-label {
+        font-size: 13px;
+    }
+
+    .sum .spec-value {
+        font-size: 13px;
+    }
+
+    .sum_itog .spec-label {
+        font-size: 13px;
+    }
+
+    .sum_itog .spec-value {
+        font-size: 13px;
+    }
+
+    .korzina_right {
+        width: 100%;
+    }
+
+    .cost_kor {
+        font-size: 13px;
+    }
+
+    .skidka_kor {
+        font-size: 12px;
+    }
+
+    .pm,
+    .shetchik {
+        font-size: 13px;
+        width: 16px;
+        height: 23px;
+        padding: 5px;
+    }
+
+    .udalit {
+        font-size: 20px;
+    }
+
+    .korzina_right .btn_pink {
+        margin-top: 20px;
+    }
+
+    .btn_pink {
+        display: none;
+    }
+
+    .btn_pink_adaptiv {
+        background-color: #904F69;
+        color: white;
+        font-size: 15px;
+        padding: 9px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border: 1px solid #904F69;
+        width: 100%;
+    }
+}
+
+/* korzina_not start */
+.korzina_not {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 587px;
+    padding-top: 90px;
+}
+
+.korzina_not_opis {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.korzina_not_opis h3 {
+    font-size: 40px;
+}
+
+.korzina_not_opis p {
+    font-size: 20px;
+    color: #989898;
+}
+
+.korzina_not .btn_pink {
+    width: 465px;
+}
+
+/* korzina_not end */
+
+@media(max-width: 1000px) {
+    .korzina_not {
+        width: 350px;
+        gap: 20px;
+    }
+
+    .korzina_not img {
+        width: 60px;
+    }
+
+    .korzina_not_opis h3 {
+        font-size: 30px;
+    }
+
+    .korzina_not_opis p {
+        font-size: 13px;
+    }
+
+    .korzina_not .btn_pink {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 13px;
+    }
+}
+
+@media(max-width: 490px) {
+    .korzina_not_opis h3 {
+        font-size: 28px;
+    }
+}
+
+/* register start */
+.register {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 500px;
+    padding-top: 80px;
+}
+
+.register_forma {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.register form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 500px;
+}
+
+.register input {
+    padding: 13px 17px;
+    color: #989898;
+    border: 1.5px solid #904F69;
+    font-size: 20px;
+}
+
+.register .btn_pink {
+    font-size: 20px;
+}
+
+.vopros {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: start;
+}
+
+.vopros a {
+    color: #989898;
+    font-size: 20px;
+}
+
+/* register end */
+
+@media(max-width: 1000px) {
+    .register input {
+        font-size: 16px;
+        padding: 10px 17px;
+    }
+
+    .register {
+        width: 400px;
+        gap: 20px;
+    }
+
+    .register form {
+        width: 400px;
+        gap: 20px;
+    }
+
+    .title h2 {
+        padding-bottom: 30px;
+    }
+
+    .chekbox label {
+        font-size: 10px;
+    }
+
+    .register .btn_pink {
+        font-size: 16px;
+        padding: 10px 17px;
+    }
+
+    .vopros a {
+        font-size: 16px;
+    }
+
+    .vopros .button_pr {
+        width: 150px;
+    }
+}
+
+@media(max-width: 490px) {
+    .register {
+        width: 100%;
+    }
+
+    .register form {
+        width: 100%;
+    }
+
+    .register input {
+        font-size: 14px;
+    }
+
+    .vopros a {
+        font-size: 14px;
+    }
+
+    .vopros .button_pr {
+        width: 110px;
+        padding: 7px 20px;
+    }
+
+    .register .chekbox input {
+        width: 10px;
+    }
+}
+
+/* profil start */
+.perekluchat {
+    color: #4F1034;
+    font-size: 26px;
+    font-family: "Forum";
+}
+
+.profil {
+    display: flex;
+    gap: 165px;
+    padding-top: 125px;
+}
+
+.profil_left {
+    width: 320px;
+}
+
+.person {
+    display: flex;
+    gap: 30px;
+}
+
+.person p {
+    color: #904F69;
+    font-size: 25px;
+    line-height: 150%;
+}
+
+.person img {
+    width: 135px;
+}
+
+.fyltr_profil {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-top: 65px;
+}
+
+.profil_right {
+    display: flex;
+    flex-direction: column;
+    max-width: 490px;
+}
+
+.profil_right {
+    display: flex;
+    flex-direction: column;
+}
+
+.profil_right_content {
+    padding-top: 62px;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+
+.forms_profil {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.forms_profil h6 {
+    color: #4F1034;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.forms_profil form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 486px;
+}
+
+.forms_profil form input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #4F1034;
+    padding: 13px 0;
+    font-size: 20px;
+    color: #989898;
+}
+
+.forms_profil input[type="text"]:focus {
+    color: #4F1034;
+}
+
+.chekboxx {
+    display: flex;
+    gap: 40px;
+}
+
+.chek {
+    display: flex;
+    gap: 6px;
+}
+
+.chek input[type="radio"] {
+    width: 21px;
+    height: 21px;
+    accent-color: #904F69;
+    cursor: pointer;
+}
+
+.chek input[type="radio"]:checked {
+    accent-color: #4F1034;
+}
+
+.chek input[type="radio"]:checked+label {
+    color: #4F1034;
+}
+
+/* profil end */
+
+@media(max-width: 1000px) {
+    .person img {
+        width: 80px;
+    }
+
+    .person {
+        gap: 18px;
+    }
+
+    .person p {
+        font-size: 20px;
+    }
+
+    .fyltr_profil {
+        padding-top: 40px;
+    }
+
+    .profil_left {
+        width: 250px;
+    }
+
+    .perekluchat {
+        font-size: 25px;
+    }
+
+    .profil {
+        gap: 60px;
+        padding-top: 80px;
+    }
+
+    .profil_right_content {
+        gap: 35px;
+        padding-top: 35px;
+    }
+
+    .forms_profil h6 {
+        font-size: 18px;
+    }
+
+    .forms_profil form input {
+        padding: 8px 0;
+        font-size: 15px;
+    }
+
+    .forms_profil form {
+        width: 400px;
+    }
+
+    .profil_right {
+        width: 300px;
+    }
+
+    .chek input[type="radio"] {
+        width: 16px;
+    }
+
+    .profil_right .btn_pink {
+        width: 400px;
+        font-size: 15px;
+        padding: 10px 0;
+    }
+}
+
+@media(max-width: 490px) {
+    .profil {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .profil_left {
+        display: flex;
+        gap: 50px;
+    }
+
+    .fyltr_profil {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .person img {
+        width: 65px;
+    }
+
+    .person p {
+        font-size: 15px;
+    }
+
+    .fyltr_profil {
+        padding-top: 0;
+    }
+
+    .perekluchat {
+        font-size: 23px;
+    }
+
+    .profil_left {
+        width: 100%;
+    }
+
+    .profil_right {
+        width: 100%;
+    }
+
+    .forms_profil form {
+        width: 100%;
+    }
+}
+
+/* zakaz start */
+.zakaz {
+    display: flex;
+    gap: 43px;
+    padding-top: 125px;
+}
+
+.zakaz_content {
+    width: 100%;
+}
+
+.zakaz_content h2 {
+    padding-left: 340px;
+}
+
+.zakaz_count {
+    padding-top: 145px;
+    display: flex;
+    flex-direction: column;
+}
+
+.zakaz_count_card {
+    padding: 30px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #4F1034;
+    display: flex;
+}
+
+.zakaz_count_card p {
+    font-size: 16px;
+}
+
+/* zakaz end */
+
+@media(max-width: 1000px) {
+    .zakaz {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .zakaz_content h2 {
+        padding-left: 200px;
+    }
+
+    .zakaz_count {
+        padding-top: 65px;
+    }
+
+    .zakaz {
+        gap: 20px;
+    }
+
+    .zakaz_count_card {
+        padding: 16px;
+    }
+
+    .zakaz_count_card p {
+        font-size: 13px;
+    }
+}
+
+@media(max-width: 490px) {
+    .zakaz_content h2 {
+        padding-left: 170px;
+    }
+
+    .zakaz_count {
+        padding-top: 40px;
+    }
+
+    .zakaz_count_card {
+        padding: 16px 0;
+    }
+
+    .zakaz_count_card p {
+        font-size: 12px;
+    }
+}
+
+
+/* admin_category start */
+.admin .title {
+    padding-top: 125px;
+}
+
+.admin_content {
+    padding-top: 40px;
+    display: flex;
+    gap: 80px;
+}
+
+.admin_fyltr {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.admin_fyltr a {
+    color: #4F1034;
+    font-family: "Forum";
+    font-size: 28px;
+}
+
+.admin_category_right {
+    display: flex;
+    flex-direction: column;
+    gap: 46px;
+}
+
+.admin_category_right button {
+    width: 300px;
+    padding: 17px 31px;
+}
+
+.category_card {
+    width: 373px;
+    background-color: #F0DAED;
+    padding: 18px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.category_card p {
+    color: #4F1034;
+    font-size: 18px;
+}
+
+.delete {
+    display: flex;
+    align-items: center;
+}
+
+.delete a {
+    font-size: 14px;
+    color: #FF0000;
+}
+
+.categories_katalog {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1197px;
+    gap: 30px;
+}
+
+/* admin_category end */
+
+@media(max-width: 1000px) {
+    .admin_fyltr a {
+        font-size: 25px;
+    }
+
+    .admin_fyltr {
+        gap: 20px;
+    }
+
+    .admin_content {
+        gap: 20px;
+    }
+
+    .admin_category_right button {
+        width: 180px;
+        padding: 10px 0;
+        font-size: 13px;
+    }
+
+    .admin_category_right {
+        gap: 30px;
+    }
+
+    .category_card {
+        padding: 15px 13px;
+        width: 200px;
+    }
+
+    .category_card p {
+        font-size: 13px;
+    }
+
+    .delete img {
+        width: 18px;
+    }
+
+    .delete a {
+        font-size: 12px;
+    }
+
+    .categories_katalog {
+        gap: 10px;
+        width: 683px;
+    }
+
+    .admin .title {
+        padding-top: 80px;
+    }
+}
+
+@media(max-width: 490px) {
+    .admin_content {
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+    }
+
+    .admin_fyltr {
+        display: flex;
+        gap: 23px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .admin_fyltr a {
+        font-size: 18px;
+    }
+
+    .admin .title h2 {
+        padding-bottom: 0;
+    }
+
+    .admin_category_right {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .admin_category_right button {
+        display: flex;
+        margin-left: 100px;
+    }
+
+    .categories_katalog {
+        width: 100%;
+        gap: 20px;
+    }
+
+    .category_card {
+        width: 185px;
+    }
+}
+
+/* admin_zakaz start */
+.admin_prosmotors {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+}
+
+.admin_prosmotors input {
+    border: 1px solid #4F1034;
+    width: 344px;
+    padding: 10px 15px;
+    color: #989898;
+    font-size: 20px;
+}
+
+.admin_prosmotors_catalog {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin_prosmotors_card {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #4F1034;
+    padding: 30px;
+    align-items: center;
+}
+
+/* admin_zakaz end */
+
+@media(max-width: 1000px) {
+    .admin_content {
+        padding-top: 20px;
+    }
+
+    .admin_prosmotors input {
+        padding: 10px 15px;
+        font-size: 15px;
+        width: 300px;
+    }
+
+    .admin_prosmotors {
+        gap: 25px;
+    }
+
+    .admin_prosmotors_card {
+        padding: 20px 0;
+        font-size: 13px;
+    }
+}
+
+@media(max-width: 490px) {
+    .admin_prosmotors input {
+        padding: 12px;
+        font-size: 11px;
+        width: 200px;
+    }
+
+    .admin_prosmotors {
+        gap: 10px;
+    }
+
+    .admin_prosmotors_card {
+        font-size: 12px;
+    }
+}
+
+/* admin_tovar start */
+.add {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.add a {
+    font-size: 14px;
+    color: #37BB2B;
+}
+
+.admin_prosmotors_tovar {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+}
+
+.admin_prosmotors_tovar .admin_prosmotors_card {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #4F1034;
+    padding: 22px;
+    align-items: center;
+}
+
+.admin_prosmotors_tovar button {
+    width: 344px;
+}
+
+/* admin_tovar end */
+
+@media(max-width: 1000px) {
+    .admin_prosmotors_tovar button {
+        width: 300px;
+        padding: 10px 15px;
+        font-size: 15px;
+    }
+
+    .admin_prosmotors_tovar .admin_prosmotors_card {
+        padding: 20px 0;
+    }
+
+    .admin_prosmotors_card .tovarr {
+        width: 90px;
+    }
+
+    .add a {
+        font-size: 12px;
+    }
+
+    .add img {
+        width: 20px;
+    }
+}
+
+@media(max-width: 490px) {
+    .admin_prosmotors_card .tovarr {
+        width: 50px;
+    }
+}
+
+/* edit start */
+.edit {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 506px;
+    padding-top: 100px;
+}
+
+.forma_osnova {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 506px;
+}
+
+.forma_osnova .img_ad {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.forma_osnova form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.forma_osnova .img_ad button {
+    width: 243px;
+    padding: 10px 69px;
+}
+
+.forma_osnova form input {
+    display: flex;
+    padding: 15px 20px;
+    border: 1px solid #4F1034;
+    color: #989898;
+    font-size: 20px;
+}
+
+.forma_osnova form textarea {
+    display: flex;
+    padding: 15px 20px;
+    border: 1px solid #4F1034;
+    color: #989898;
+    font-size: 20px;
+    height: 236px;
+}
+
+/* edit end */
+
+@media(max-width: 1000px) {
+    .img_ad img {
+        width: 150px;
+    }
+
+    .forma_osnova {
+        width: 400px;
+    }
+
+    .edit {
+        width: 400px;
+    }
+
+    .forma_osnova .img_ad button {
+        width: 200px;
+        padding: 10px 30px;
+        font-size: 15px;
+    }
+
+    .forma_osnova form input {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+
+    .forma_osnova form {
+        gap: 15px;
+    }
+
+    .forma_osnova form textarea {
+        font-size: 15px;
+        height: 200px;
+    }
+
+    .forma_osnova form .btn_pink {
+        padding: 10px 30px;
+        font-size: 15px;
+    }
+
+}
+
+@media(max-width: 490px) {
+    .forma_osnova {
+        width: 100%;
+    }
+
+    .edit {
+        width: 100%;
+    }
+
+    .forma_osnova .img_ad button {
+        display: flex;
+    }
+}
+
+.arrowLeftBtnElSlider {
+    position: absolute;
+    left: 0px;
+    height: 100%;
+    width: 50%;
+    background-color: rgba(255, 210, 113, 0);
+    border: none;
+    font-size: 26px;
+    color: rgba(255, 255, 255, 0);
+}
+
+.arrowRightBtnElSlider {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    right: 0px;
+    background-color: rgba(255, 210, 113, 0);
+    border: none;
+    font-size: 26px;
+    color: rgba(255, 255, 255, 0);
+}
+
+.arrowLeftBtnElSlider:hover {
+    background-color: rgba(255, 210, 113, 0.218);
+    color: rgb(255, 255, 255);
+}
+
+.arrowRightBtnElSlider:hover {
+    background-color: rgba(255, 210, 113, 0.218);
+    color: rgb(255, 255, 255);
+}
+
+.blockForImg {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    overflow-x: scroll;
+}
