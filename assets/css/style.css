@@ -71,25 +71,46 @@
 .osnov_card {
     display: flex;
     flex-direction: column;
-    gap: 10px;
     width: 325px;
 }
 
 .image_osn_card {
     position: relative;
+    padding-bottom: 10px;
+}
+
+.image_osn_card .image_tovar {
+    width: 325px;
+    position: relative;
 }
 
 .korzina_button {
     position: absolute;
-    bottom: 15px;
+    bottom: 25px;
     right: 15px;
     cursor: pointer;
+    background: none;
+    border: none;
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/osnov_card/korzina.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: all 0.3s ease;
+    color: #4F1034;
+}
+
+.korzina_button:hover,
+.korzina_button.in-cart {
+    background-image: url(../img/osnov_card/hover_kor.svg);
 }
 
 .opisanie_osnov_card {
     display: flex;
     flex-direction: column;
     gap: 7px;
+    color: black;
 }
 
 .category_osnov_card {
@@ -118,6 +139,8 @@
     color: #999999;
     text-decoration: line-through;
 }
+
+
 
 /* контейнер */
 .container {
@@ -217,6 +240,11 @@ header nav img {
     cursor: pointer;
 }
 
+.burger_desctop {
+    display: flex;
+    align-items: center;
+}
+
 /* header end */
 
 /* banner start */
@@ -311,6 +339,7 @@ header nav img {
 
 /* infoblok end */
 
+
 /* popular_kategoty start */
 .popular_kategoty_katalog {
     display: flex;
@@ -343,6 +372,8 @@ header nav img {
     flex-wrap: wrap;
     gap: 26px;
 }
+
+/* popular_kategoty end */
 
 /* popular_kategoty end */
 
@@ -464,30 +495,32 @@ input[type="checkbox"] {
 .popukar_katalog {
     display: flex;
     gap: 20px;
-    align-items: center;
+    overflow: hidden;
 }
 
 .slider {
+    position: relative;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 23px;
 }
 
-.slider button {
+.katalog_other_products_dalee {
+    display: flex;
+    justify-content: space-between;
+}
+
+.other_products_dalee h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60px;
-    height: 60px;
-    color: #904F69;
-    border: 2px solid #904F69;
-    background: none;
-    cursor: pointer;
-}
-
-.popukar_katalog .korzina_button {
-    bottom: 30px;
+    padding: 50px;
+    color: #989898;
+    font-size: 40px;
+    font-weight: 500;
+    font-family: "Montserrat";
 }
 
 /* footer start */
@@ -602,1177 +635,6 @@ address {
 
 /* footer end */
 
-/* popular end */
-
-@media(max-width: 1000px) {
-    .container {
-        max-width: 800px;
-        margin: 0 auto;
-        overflow: hidden;
-    }
-
-    .my-120 {
-        padding-top: 100px;
-    }
-
-    h2 {
-        font-size: 30px;
-    }
-
-    /* карточка товара */
-    .image_tovar {
-        width: 170px;
-    }
-
-    .collection_text p {
-        font-size: 11px;
-        bottom: 30px;
-        left: 15px;
-    }
-
-    .korzina_button {
-        width: 26px;
-    }
-
-    .osnov_card {
-        width: 170px;
-        gap: 5px;
-    }
-
-    .opisanie_osnov_card {
-        width: 170px;
-        gap: 4px;
-    }
-
-    .category_osnov_card {
-        font-size: 12px;
-    }
-
-    .name_osnov_card {
-        font-size: 16px;
-    }
-
-    .cost {
-        font-size: 14px;
-    }
-
-    .skidka {
-        font-size: 13px;
-    }
-
-    /* header start */
-    .burger_adaptiv_telephone {
-        display: none;
-    }
-
-    .burger_desctop {
-        display: none;
-    }
-
-    .burger_adaptiv {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        position: relative;
-    }
-
-    .burger_adaptiv .luupa {
-        margin-left: 50px;
-    }
-
-    .burger_adaptiv img {
-        width: 25px;
-    }
-
-    .logo a img {
-        width: 111px;
-    }
-
-    #burger,
-    [for=burger] {
-        display: none;
-    }
-
-    [for=burger] {
-        position: absolute;
-        top: 10px;
-        left: 8px;
-        width: 25px;
-        height: 25px;
-        cursor: pointer;
-        z-index: 1000;
-    }
-
-    .burger_adaptiv span {
-        display: block;
-        width: 100%;
-        height: 3px;
-        background: #414141;
-        position: relative;
-    }
-
-    .burger_adaptiv span::before,
-    .burger_adaptiv span::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 3px;
-        background: #414141;
-    }
-
-    .burger_adaptiv span::before {
-        top: -8px;
-    }
-
-    .burger_adaptiv span::after {
-        top: 8px;
-    }
-
-    .burger_adaptiv nav {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 300px;
-        height: 100%;
-        background: #904F69;
-        padding-top: 60px;
-        transition: 0.5s;
-    }
-
-    .burger_adaptiv nav a {
-        display: block;
-        padding: 15px 20px;
-        color: white;
-        font-size: 20px;
-        border-bottom: 1px solid #ddd;
-    }
-
-    #burger:checked~nav {
-        right: 0;
-        z-index: 1001;
-    }
-
-    #burger:checked~label span {
-        background: transparent;
-    }
-
-    #burger:checked~label span::before {
-        transform: rotate(45deg);
-        top: 0;
-    }
-
-    #burger:checked~label span::after {
-        transform: rotate(-45deg);
-        top: 0;
-    }
-
-    [for=burger] {
-        display: block;
-    }
-
-    /* header stop */
-
-    /* banner start */
-    .banner_left img {
-        width: 390px;
-        height: 369px;
-    }
-
-    .banner_right {
-        max-width: 391px;
-        gap: 20px;
-    }
-
-    .banner_right img {
-        width: 188.5px;
-        height: 184.6px;
-    }
-
-    h1 {
-        font-size: 36px;
-    }
-
-    .katalog_button button {
-        width: 116px;
-        padding: 7px 23px;
-        font-size: 12px;
-        white-space: nowrap;
-    }
-
-    .katalog_button p {
-        font-size: 9px;
-    }
-
-    /* banner end */
-
-    /* infoblock start  */
-    .preimuchestva_card {
-        width: 310px;
-    }
-
-    .right {
-        width: 250px;
-    }
-
-    .left .odin {
-        width: 25px;
-    }
-
-    .left img {
-        width: 45px;
-    }
-
-    h3 {
-        font-size: 24px;
-    }
-
-    .right p {
-        font-size: 11px;
-    }
-
-    .pomada {
-        width: 175px;
-        margin-top: 20px;
-    }
-
-    /* infoblock end */
-
-    /* popular_kategoty start */
-    .popular_kategoty_2 {
-        z-index: 100;
-    }
-
-    .popular_kategoty_katalog {
-        gap: 14px;
-    }
-
-    .popular_kategoty_right {
-        gap: 14px;
-    }
-
-    .popular_kategoty_left .category img {
-        width: 188px;
-    }
-
-    .popular_kategoty_right .category img {
-        width: 270px;
-    }
-
-    .popular_kategoty_right .category .category_more {
-        width: 300px;
-    }
-
-    .category button {
-        bottom: 15px;
-        left: 15px;
-        padding: 6px 21px;
-        font-size: 11px;
-    }
-
-    /* popular_kategoty end */
-
-    /* novinki start */
-    .novinki_content {
-        gap: 25px;
-    }
-
-    .novinki_left img {
-        width: 400px;
-    }
-
-    .collection_text {
-        bottom: 15px;
-        left: 15px;
-    }
-
-    .novinki_right {
-        gap: 19px;
-    }
-
-    /* novinki end */
-
-    /* personal start */
-    .personal {
-        padding: 50px 0;
-    }
-
-    .personal_content {
-        gap: 20px;
-    }
-
-    .personal_content p {
-        font-size: 18px;
-    }
-
-    .rassylka {
-        width: 270px;
-    }
-
-    .rassylka input {
-        width: 270px;
-        font-size: 17px;
-        padding: 7px 21px;
-    }
-
-    .chekbox input {
-        width: 8px;
-    }
-
-    .chekbox label {
-        font-size: 9px;
-    }
-
-    .btn {
-        width: 270px;
-        font-size: 13px;
-        padding: 7px 92px;
-    }
-
-    /* personal end */
-
-    /* popular start */
-    .popular_content {
-        gap: 40px;
-    }
-
-    .slider {
-        gap: 14px;
-    }
-
-    .slider button {
-        width: 40px;
-        height: 40px;
-    }
-
-    .slider button img {
-        width: 15px;
-    }
-
-    /* popular end */
-
-    /* footer start */
-    footer {
-        font-size: 14px;
-        padding: 80px 0;
-    }
-
-    .stolbec_1 {
-        width: 215px;
-    }
-
-    .stolbec_2 {
-        width: 200px;
-    }
-
-    .stolbec_3 {
-        width: 110px;
-    }
-
-    .stolbec_4 {
-        width: 180px;
-        gap: 40px;
-    }
-
-    footer .logo img {
-        width: 101px;
-    }
-
-    footer h4 {
-        font-size: 16px;
-        padding-bottom: 12px;
-    }
-
-    .telephone a {
-        font-size: 14px;
-    }
-
-    .liniya {
-        height: 155px;
-    }
-
-    address {
-        padding-top: 24px;
-    }
-
-    .prava {
-        padding-top: 35px;
-    }
-
-    .telephone {
-        gap: 6px;
-    }
-
-    .telephone img {
-        width: 22px;
-    }
-
-    .news {
-        padding-top: 17px;
-    }
-
-    .news img {
-        width: 22px;
-    }
-
-    /* footer end */
-}
-
-@media(max-width: 490px) {
-    .container {
-        max-width: 390px;
-        margin: 0 auto;
-        overflow: hidden;
-    }
-
-    .my-120 {
-        padding-top: 40px;
-    }
-
-    h2 {
-        font-size: 25px;
-    }
-
-    .title h2 {
-        padding-bottom: 20px;
-        text-align: center;
-    }
-
-    /* карточка товара */
-    .image_tovar {
-        width: 185px;
-    }
-
-    .collection_text p {
-        font-size: 11px;
-        bottom: 30px;
-        left: 15px;
-    }
-
-    .korzina_button {
-        width: 30px;
-        bottom: 15px;
-        right: 15px;
-    }
-
-    .osnov_card {
-        width: 185px;
-        gap: 5px;
-    }
-
-    .opisanie_osnov_card {
-        width: 185px;
-        gap: 4px;
-    }
-
-    .category_osnov_card {
-        font-size: 12px;
-    }
-
-    .name_osnov_card {
-        font-size: 16px;
-    }
-
-    .cost {
-        font-size: 14px;
-    }
-
-    .skidka {
-        font-size: 13px;
-    }
-
-    /* header start */
-    .burger_adaptiv {
-        display: none;
-    }
-
-    .burger_adaptiv_telephone {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        position: relative;
-    }
-
-    .burger_adaptiv_telephone .luupa {
-        margin-left: 50px;
-    }
-
-    .burger_adaptiv_telephone img {
-        width: 23px;
-    }
-
-    .logo a img {
-        width: 100px;
-    }
-
-    #burger2,
-    [for=burger2] {
-        display: none;
-    }
-
-    [for=burger2] {
-        position: absolute;
-        top: 10px;
-        left: 8px;
-        width: 23px;
-        height: 23px;
-        cursor: pointer;
-        z-index: 1000;
-    }
-
-    .burger_adaptiv_telephone span {
-        display: block;
-        width: 100%;
-        height: 3px;
-        background: #414141;
-        position: relative;
-    }
-
-    .burger_adaptiv_telephone span::before,
-    .burger_adaptiv_telephone span::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 3px;
-        background: #414141;
-    }
-
-    .burger_adaptiv_telephone span::before {
-        top: -8px;
-    }
-
-    .burger_adaptiv_telephone span::after {
-        top: 8px;
-    }
-
-    .burger_adaptiv_telephone nav {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 300px;
-        height: 100%;
-        background: #904F69;
-        padding-top: 60px;
-        transition: 0.5s;
-    }
-
-    .burger_adaptiv_telephone nav a {
-        display: block;
-        padding: 15px 20px;
-        color: white;
-        font-size: 20px;
-        border-bottom: 1px solid #ddd;
-    }
-
-    #burger2:checked~nav {
-        right: 0;
-        z-index: 1001;
-    }
-
-    #burger2:checked~label span {
-        background: transparent;
-    }
-
-    #burger2:checked~label span::before {
-        transform: rotate(45deg);
-        top: 0;
-    }
-
-    #burger2:checked~label span::after {
-        transform: rotate(-45deg);
-        top: 0;
-    }
-
-    [for=burger2] {
-        display: block;
-    }
-
-    /* header end */
-
-    /* banner start */
-    .banner {
-        display: none;
-    }
-
-    .banner_adaptiv {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    h1 {
-        font-size: 30px;
-        text-align: center;
-        line-height: 110%;
-    }
-
-    .foto {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .foto img {
-        width: 190px;
-    }
-
-    .katalog_button button {
-        padding: 7px 23px;
-        font-size: 12.25px;
-    }
-
-    /* banner end */
-
-    /* infoblock start  */
-    .infoblock_info .pomada {
-        display: none;
-    }
-
-    .infoblock_info {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        align-items: center;
-    }
-
-    .preimuchestva_stolbec {
-        gap: 20px;
-    }
-
-    .preimuchestva_card {
-        width: 390px;
-    }
-
-    .right {
-        width: 320px;
-    }
-
-    /* infoblock end */
-
-    /* popular_kategoty start */
-    .popular_kategoty {
-        display: none;
-    }
-
-    .popular_kategoty_2 {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .popular_kategoty_niz {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-top: 10px;
-    }
-
-    .category button {
-        position: absolute;
-        bottom: 14px;
-        left: 14px;
-        padding: 5px 27px;
-        background: #ffffff;
-        border: 1px solid #ffffff;
-        font-size: 9px;
-        cursor: pointer;
-    }
-
-    .category button:hover {
-        color: white;
-        border: 1px solid #ffffff;
-        background: none;
-    }
-
-    /* popular_kategoty end */
-
-    /* novinki start */
-    .novinki {
-        display: none;
-    }
-
-    .novinki_adaptive {
-        display: flex;
-        flex-direction: column;
-        /* gap: 20px; */
-    }
-
-    .novinki_niz {
-        padding-top: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    /* novinki end */
-
-    /* personal start */
-    .personal {
-        padding: 40px 0;
-    }
-
-    .personal_content {
-        gap: 10px;
-    }
-
-    .personal_content p {
-        font-size: 13px;
-        width: 250px;
-    }
-
-    .rassylka {
-        width: 250px;
-    }
-
-    .rassylka input {
-        width: 250px;
-        font-size: 14px;
-        padding: 4px 14px;
-    }
-
-    .chekbox input {
-        width: 6px;
-    }
-
-    .chekbox label {
-        font-size: 8px;
-    }
-
-    .btn {
-        width: 250px;
-        font-size: 11px;
-        padding: 6px 64px;
-    }
-
-    /* personal end */
-
-    /* popular start */
-    /* popular end */
-
-    /* footer start */
-    .liniya_not {
-        display: none;
-    }
-
-    .footer_content {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 40px;
-    }
-
-    footer {
-        font-size: 12px;
-        padding: 30px 0;
-    }
-
-    .stolbec_1 {
-        width: 150px;
-    }
-
-    .stolbec_2 {
-        width: 150px;
-    }
-
-    .stolbec_3 {
-        width: 150px;
-    }
-
-    .stolbec_4 {
-        width: 150px;
-        gap: 40px;
-    }
-
-    .documents {
-        gap: 8px;
-    }
-
-    footer .logo img {
-        width: 101px;
-    }
-
-    footer h4 {
-        font-size: 14px;
-        padding-bottom: 12px;
-    }
-
-    .telephone a {
-        font-size: 14px;
-    }
-
-    .stolbec_3 nav {
-        gap: 10px;
-    }
-
-    .liniya {
-        height: 155px;
-    }
-
-    address {
-        padding-top: 24px;
-    }
-
-    .prava {
-        padding-top: 20px;
-    }
-
-    .telephone {
-        gap: 6px;
-    }
-
-    .telephone img {
-        width: 22px;
-    }
-
-    .news {
-        padding-top: 17px;
-    }
-
-    .news img {
-        width: 22px;
-    }
-
-    /* footer end */
-}
-
-/* katalog start */
-.banner_katalog {
-    background-image: url(../img/katalog/banner.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 348px;
-    margin-top: 56px;
-}
-
-.katalog_cards {
-    background-color: white;
-    padding-top: 56px;
-}
-
-.perehod_katalog {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    padding-top: 53px;
-}
-
-.perehod_katalog a {
-    font-size: 20px;
-    color: #904F69;
-}
-
-.perehod_katalog p {
-    font-size: 20px;
-    color: #904F69;
-}
-
-.fyltr_ktalog h5 {
-    font-family: "Forum";
-    font-size: 32px;
-    color: #4F1034;
-}
-
-.category_katalog_nazv {
-    font-family: "Forum";
-    font-size: 26px;
-    color: #904F69;
-    padding-top: 24px;
-}
-
-.fyltr {
-    padding-top: 17px;
-    padding-bottom: 1000px;
-}
-
-.katalog_with_fyltr {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    position: relative;
-}
-
-.fyltr_ktalog {
-    width: 290px;
-    border-right: 2px solid #904F69;
-    flex-shrink: 0;
-    position: sticky;
-    top: 0;
-    max-height: 100%;
-    overflow-y: auto;
-}
-
-.cardss {
-    padding-left: 60px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 50px;
-    width: 1200px;
-}
-
-.osnova_kaatlog {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 50px;
-}
-
-.cardss .button_pr {
-    width: 270px;
-    margin-left: 470px;
-}
-
-/*  */
-.accordion {
-    background-color: transparent;
-    color: #989898;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
-    transition: all 0.3s ease;
-    font-family: "Forum";
-    font-size: 24px;
-    position: relative;
-    z-index: 1;
-}
-
-.accordion:hover {
-    color: #4F1034;
-}
-
-.panel {
-    padding: 0 18px;
-    background-color: white;
-    display: none;
-    overflow: hidden;
-    position: absolute;
-    left: 0;
-    z-index: 2;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-}
-
-.panel a {
-    display: block;
-    padding: 12px 16px;
-    text-decoration: none;
-    color: #989898;
-    font-family: "Forum";
-    font-size: 23.88px;
-    transition: color 0.3s;
-}
-
-.panel a:hover {
-    color: #4F1034;
-    background-color: #f0f0f0;
-}
-
-.accordion-container {
-    position: relative;
-    width: 100%;
-}
-
-.accordion:hover+.panel,
-.panel:hover {
-    display: block;
-}
-
-.accordion:hover~.accordion {
-    transform: translateY(100%);
-    transition: transform 0.3s ease;
-}
-
-.panel.show {
-    display: block;
-}
-
-.accordion-container .accordion {
-    position: relative;
-    z-index: 1;
-}
-
-.accordion-container .panel {
-    position: absolute;
-    z-index: 2;
-}
-
-.accordion-container .accordion:hover {
-    z-index: 3;
-}
-
-.accordion-container .accordion:hover+.panel {
-    z-index: 3;
-}
-
-.accordion-container .panel {
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.accordion-container .accordion+.accordion {
-    margin-top: 0;
-}
-
-/*  */
-/* katalog end */
-
-/* katalog_telephone start */
-.fylytr_accordeon .accordion_2 {
-    background-color: transparent;
-    color: #904F69;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
-    transition: 0.4s;
-    font-family: "Forum";
-    font-size: 24px;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-}
-
-.fylytr_accordeon {
-    display: flex;
-    flex-direction: column;
-}
-
-.accordion_2-1 {
-    color: #904F69;
-    font-size: 24px;
-    padding: 18px;
-    font-family: "Forum";
-    width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
-    background-color: transparent;
-}
-
-.fylytr_accordeon .panel_2 {
-    padding: 0 18px;
-    background-color: white;
-    display: none;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-}
-
-.fylytr_accordeon .panel_2 a {
-    display: flex;
-    flex-direction: column;
-    color: #989898;
-    font-size: 24px;
-    padding: 10px 18px;
-    font-family: "Forum";
-}
-
-.fylytr_accordeon .accordion_2:after {
-    content: '\002B';
-    font-size: 20px;
-    color: #904F69;
-    float: right;
-    margin-left: 5px;
-}
-
-.katalog_telephone {
-    padding-top: 40px;
-}
-
-/* katalog_telephone end */
-@media(max-width: 1000px) {
-    .banner_katalog {
-        background-image: url(../img/katalog/banner2.svg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 212px;
-        margin-top: 35px;
-    }
-
-    .perehod_katalog a {
-        font-size: 14px;
-    }
-
-    .perehod_katalog p {
-        font-size: 14px
-    }
-
-    .perehod_katalog {
-        padding-top: 40px;
-    }
-
-    .fyltr_ktalog {
-        width: 220px;
-    }
-
-    .fyltr_ktalog h5 {
-        font-size: 27px;
-    }
-
-    .category_katalog_nazv {
-        font-size: 23px;
-    }
-
-    .accordion {
-        font-size: 22px;
-        padding: 10px;
-    }
-
-    .panel a {
-        font-size: 22px;
-        padding: 10px 10px;
-    }
-
-    .cardss {
-        padding-left: 20px;
-
-    }
-
-    .osnova_kaatlog {
-        gap: 20px;
-        width: 560px;
-    }
-
-    .cardss {
-        width: 600px;
-    }
-
-    .panel {
-        padding: 0;
-    }
-
-    .button_pr {
-        padding: 7px 33px;
-        font-size: 12px;
-        width: 170px;
-    }
-
-    .cardss .button_pr {
-        padding: 8px 30px;
-        font-size: 12px;
-        width: 170px;
-        margin-left: 200px;
-    }
-}
-
-/* katalog_cards_phone_all start */
-@media(max-width: 490px) {
-    .katalog_cards_phone a {
-        font-family: "Forum";
-        font-size: 18px;
-        color: #4F1034;
-    }
-
-    .cardss_telephone {
-        padding-top: 17px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-}
-
-/* katalog_cards_phone_all end */
-
 /* odin_tovar start */
 .odin_tovar {
     padding-top: 80px;
@@ -1806,6 +668,15 @@ address {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+.images .thumbnail {
+    width: 165px;
+    cursor: pointer;
+}
+
+.many_slider_right .main-image {
+    width: 535px;
 }
 
 .str_slider {
@@ -1942,7 +813,6 @@ address {
     font-size: 14px;
     width: 154px;
 }
-
 
 /* odin_tovar end */
 
@@ -2106,15 +976,12 @@ address {
     display: flex;
     justify-content: space-between;
     padding-top: 38px;
-    height: 100vh;
-    overflow: hidden;
 }
 
 .korzina_left {
     display: flex;
     flex-direction: column;
     height: 100%;
-    overflow-y: auto;
     padding-right: 20px;
 }
 
@@ -2130,6 +997,11 @@ address {
     display: flex;
     gap: 30px;
     width: 538px;
+}
+
+.img_nazv_kor img {
+    width: 122px;
+    height: 122px;
 }
 
 .dobavleny_tovar {
@@ -2214,6 +1086,9 @@ address {
 .korzina_right {
     width: 530px;
     flex-shrink: 0;
+    position: sticky;
+    top: 40px;
+    align-self: flex-start;
 }
 
 .korzina_right .btn_pink {
@@ -2554,8 +1429,9 @@ address {
     font-size: 20px;
 }
 
-.register .btn_pink {
+.register .btn_pink input {
     font-size: 20px;
+    color: white;
 }
 
 .vopros {
@@ -2659,6 +1535,11 @@ address {
     gap: 30px;
 }
 
+.person input {
+    border-radius: 50px;
+    background-color: gray;
+}
+
 .person p {
     color: #904F69;
     font-size: 25px;
@@ -2674,6 +1555,9 @@ address {
     flex-direction: column;
     gap: 25px;
     padding-top: 65px;
+    position: sticky;
+    top: -20px;
+    align-self: flex-start;
 }
 
 .profil_right {
@@ -2706,14 +1590,14 @@ address {
     font-weight: 500;
 }
 
-.forms_profil form {
+.forms_profil {
     display: flex;
     flex-direction: column;
     gap: 25px;
     width: 486px;
 }
 
-.forms_profil form input {
+.profil_right_content form input {
     border-top: none;
     border-left: none;
     border-right: none;
@@ -2968,17 +1852,6 @@ address {
     font-size: 28px;
 }
 
-.admin_category_right {
-    display: flex;
-    flex-direction: column;
-    gap: 46px;
-}
-
-.admin_category_right button {
-    width: 300px;
-    padding: 17px 31px;
-}
-
 .category_card {
     width: 373px;
     background-color: #F0DAED;
@@ -2993,14 +1866,15 @@ address {
     font-size: 18px;
 }
 
-.delete {
+.delete button {
     display: flex;
     align-items: center;
-}
-
-.delete a {
     font-size: 14px;
     color: #FF0000;
+    border: none;
+    background: none;
+    gap: 5px;
+    cursor: pointer;
 }
 
 .categories_katalog {
@@ -3008,6 +1882,21 @@ address {
     flex-wrap: wrap;
     width: 1197px;
     gap: 30px;
+}
+
+.admin .title p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #4F1034;
+}
+
+.admin_category_right .btn_pink {
+    width: 300px;
+    font-size: 18px;
+    padding: 13px 0;
+    margin-bottom: 20px;
 }
 
 /* admin_category end */
@@ -3025,11 +1914,7 @@ address {
         gap: 20px;
     }
 
-    .admin_category_right button {
-        width: 180px;
-        padding: 10px 0;
-        font-size: 13px;
-    }
+
 
     .admin_category_right {
         gap: 30px;
@@ -3090,11 +1975,6 @@ address {
         flex-direction: column;
     }
 
-    .admin_category_right button {
-        display: flex;
-        margin-left: 100px;
-    }
-
     .categories_katalog {
         width: 100%;
         gap: 20px;
@@ -3124,6 +2004,7 @@ address {
 .admin_prosmotors_catalog {
     display: flex;
     flex-direction: column;
+
 }
 
 .admin_prosmotors_card {
@@ -3200,8 +2081,8 @@ address {
     align-items: center;
 }
 
-.admin_prosmotors_tovar button {
-    width: 344px;
+.admin_prosmotors_card .tovarr {
+    width: 102px;
 }
 
 /* admin_tovar end */
@@ -3254,10 +2135,18 @@ address {
     width: 506px;
 }
 
-.forma_osnova .img_ad {
+.img_ad {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.img_ad img {
+    width: 220px;
+}
+
+.forma_osnova label {
+    font-size: 20px;
 }
 
 .forma_osnova form {
@@ -3271,7 +2160,28 @@ address {
     padding: 10px 69px;
 }
 
+.block {
+    background-color: #414141;
+    width: 65px;
+}
+
 .forma_osnova form input {
+    display: flex;
+    padding: 15px 20px;
+    border: 1px solid #4F1034;
+    color: #989898;
+    font-size: 20px;
+}
+
+.forma_osnova option {
+    display: flex;
+    padding: 15px 20px;
+    border: 1px solid #4F1034;
+    color: #989898;
+    font-size: 20px;
+}
+
+.forma_osnova select {
     display: flex;
     padding: 15px 20px;
     border: 1px solid #4F1034;
@@ -3344,11 +2254,21 @@ address {
     }
 }
 
+.slider button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    color: #904F69;
+    border: 2px solid #904F69;
+    background: none;
+    cursor: pointer;
+}
+
 .arrowLeftBtnElSlider {
     position: absolute;
     left: 0px;
-    height: 100%;
-    width: 50%;
     background-color: rgba(255, 210, 113, 0);
     border: none;
     font-size: 26px;
@@ -3357,9 +2277,6 @@ address {
 
 .arrowRightBtnElSlider {
     position: absolute;
-    height: 100%;
-    width: 50%;
-    right: 0px;
     background-color: rgba(255, 210, 113, 0);
     border: none;
     font-size: 26px;
@@ -3367,12 +2284,10 @@ address {
 }
 
 .arrowLeftBtnElSlider:hover {
-    background-color: rgba(255, 210, 113, 0.218);
     color: rgb(255, 255, 255);
 }
 
 .arrowRightBtnElSlider:hover {
-    background-color: rgba(255, 210, 113, 0.218);
     color: rgb(255, 255, 255);
 }
 
@@ -3384,3 +2299,185 @@ address {
     justify-content: start;
     overflow-x: scroll;
 }
+
+/* katalog start */
+.banner_katalog {
+    background-image: url(../img/katalog/banner.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 348px;
+    margin-top: 56px;
+}
+
+.katalog_cards {
+    background-color: white;
+    padding-top: 56px;
+}
+
+.perehod_katalog {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-top: 53px;
+}
+
+.perehod_katalog a {
+    font-size: 20px;
+    color: #904F69;
+}
+
+.perehod_katalog p {
+    font-size: 20px;
+    color: #904F69;
+}
+
+.fyltr_ktalog h5 {
+    font-family: "Forum";
+    font-size: 32px;
+    color: #4F1034;
+}
+
+.category_katalog_nazv {
+    font-family: "Forum";
+    font-size: 26px;
+    color: #904F69;
+    padding-top: 24px;
+}
+
+.fyltr {
+    padding-top: 17px;
+    padding-bottom: 1000px;
+}
+
+.katalog_with_fyltr {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.fyltr_ktalog {
+    width: 290px;
+    border-right: 2px solid #904F69;
+    position: sticky;
+    top: 20px;
+    align-self: flex-start;
+    height: 100vh;
+}
+
+.cardss {
+    padding-left: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px;
+    width: 1200px;
+}
+
+.osnova_kaatlog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.cardss .button_pr {
+    width: 270px;
+    margin-left: 470px;
+}
+
+/*  */
+.accordion {
+    background-color: transparent;
+    color: #989898;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: all 0.3s ease;
+    font-family: "Forum";
+    font-size: 24px;
+    position: relative;
+    z-index: 1;
+}
+
+.accordion:hover {
+    color: #4F1034;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    z-index: 2;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.panel a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #989898;
+    font-family: "Forum";
+    font-size: 23.88px;
+    transition: color 0.3s;
+}
+
+.panel a:hover {
+    color: #4F1034;
+    background-color: #f0f0f0;
+}
+
+.accordion-container {
+    position: relative;
+    width: 100%;
+}
+
+.accordion:hover+.panel,
+.panel:hover {
+    display: block;
+}
+
+.accordion:hover~.accordion {
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.panel.show {
+    display: block;
+}
+
+.accordion-container .accordion {
+    position: relative;
+    z-index: 1;
+}
+
+.accordion-container .panel {
+    position: absolute;
+    z-index: 2;
+}
+
+.accordion-container .accordion:hover {
+    z-index: 3;
+}
+
+.accordion-container .accordion:hover+.panel {
+    z-index: 3;
+}
+
+.accordion-container .panel {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-container .accordion+.accordion {
+    margin-top: 0;
+}
+
+/*  */
+/* katalog end */
